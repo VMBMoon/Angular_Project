@@ -1,0 +1,9 @@
+h2 {
+  background:black;
+  color: whitesmoke;
+  padding: 15px;
+}
+.canShow {
+  color: red;
+  font-family: Arial 'Franklin Gothic Medium', 'Arial Narrow';
+}
