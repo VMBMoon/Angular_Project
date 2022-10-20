@@ -1,9 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 h2 {
   background:black;
   color: whitesmoke;
   padding: 15px;
+  border-radius: 10px ;
+}
+button.secret{
+  padding: 15px 25px;
+  background: red;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight:bolder;
+  text-align: center;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow:0px 9px darkred;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+button.secret:hover {
+  background: rgb(204, 0, 0);
+}
+
+button.secret:active {
+  background-color: rgb(204, 0, 0);
+  box-shadow: 0 5px darkred;
+  transform: translateY(4px);
+
 }
 .canShow {
   color: red;
-  font-family: Arial 'Franklin Gothic Medium', 'Arial Narrow';
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 10px;
+}
+
+div.canShow h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+button.invade {
+  padding: 15px 25px;
+  background: rgb(105, 105, 105);
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight:bolder;
+  text-align: center;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow:0px 9px black;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+button.invade:hover {
+  background:rgb(65, 65, 65);
+}
+
+button.invade:active{
+  background:rgb(65, 65, 65);
+  box-shadow: 0 5px black;
+  transform: translateY(4px);
+}
+button.fix {
+  padding: 15px 25px;
+  background: rgb(0, 179, 0);
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight:bolder;
+  text-align: center;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow:0px 9px darkgreen;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+button.fix:hover {
+  background: green;
+}
+
+button.fix:active {
+  background-color: green;
+  box-shadow: 0 5px darkgreen;
+  transform: translateY(4px);
 }

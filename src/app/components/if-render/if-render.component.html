@@ -1,11 +1,15 @@
 <div class="class">
-  <div class="canShow" *ngIf="canShow">This text is shown because was permitted
-  <h2 *ngIf="name === 'James Bond'; else nameNotFound">The name is Bond, James Bond</h2>
-  <ng-template #nameNotFound>
+  <button class="secret" (click)="showName()">Secret Button</button>
+    <div class="canShow" *ngIf="canShow">This box is shown because was permitted
+      <div *ngIf="name === 'James Bond'; else agentnotfound">
+        <h2>The name is Bond, James Bond</h2>
+        <button class="invade" (click)="invade()">Invade</button>
+      </div>
+  <ng-template #agentnotfound>
     <div>
-        <h2>Dr. No was here</h2>
+        <h2 [ngStyle]="{'color': invaded}">Dr. No was here</h2>
+    <button class="fix" (click)="fixEvil()">Click Here to Fix it</button>
     </div>
-    <a href=#>Click Here to Fix it</a>
   </ng-template>
 </div></div>
 

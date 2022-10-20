@@ -1,0 +1,60 @@
+p {
+  font-family: 'Nunito', sans-serif;
+  margin: 15px;
+  font-size: large;
+  color: chocolate;
+}
+
+.button {
+  border-radius: 5px;
+  background-color: chocolate;
+  background-image: url(https://cdn.pixabay.com/photo/2014/04/03/10/01/chocolate-309609_960_720.png);
+  background-size:cover;
+  background-blend-mode:overlay;
+  border: none;
+  color: beige;
+  text-shadow: 1px 1px rgb(148, 76, 24);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px;
+  width: 200px;
+  height: 73px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  box-shadow: 0 7px rgb(172, 88, 28);
+
+}
+
+.button:active {
+  box-shadow: 0 3px rgb(172, 88, 28);
+  transform: translatey(4px);
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
