@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first-component.component.css']
 })
 export class FirstComponentComponent implements OnInit {
-  name: string ="Hisui Kitsune";
+  name: string ="Tamamo no Mae";
   age: number = 1000;
   job = "Shrine Keeper";
-  hobbies = ["Walking"," Kung Fu"," Meditation"];
+  hobbies = ["Walking"," Martial Arts"," Meditation"];
 
   constructor() { }
 
