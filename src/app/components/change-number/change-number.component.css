@@ -9,6 +9,7 @@
   background-size: cover;
   background-blend-mode:overlay;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .link:hover {
