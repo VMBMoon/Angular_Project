@@ -1,0 +1,44 @@
+button {
+  background: yellow;
+  border-radius: 16px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.425);
+  border-width: 0.8px;
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 5px yellowgreen;
+  transition: all 0.1s;
+}
+.delete{
+  background: red;
+  box-shadow: 0 5px darkred;
+  margin-left: 5px;
+}
+.delete:hover{
+  background: rgb(255, 71, 71);
+  box-shadow: 0 5px rgb(184, 0, 0);
+}
+.delete:active{
+  box-shadow: 0 2px rgb(184, 0, 0);
+}
+
+button:hover{
+  background: rgb(255, 255, 159);
+  box-shadow: 0 5px rgb(170, 216, 78);
+}
+button:active {
+  box-shadow: 0 2px rgb(170, 216, 78);
+  transform: translateY(4px);
+}
+.button {
+  text-align: right;
+  transform: translateX(30%) translateY(-110%);
+}
+ul{
+  display: inline-block;
+  text-align: left;
+}
+li {
+  text-align: left;
+  margin-bottom: 1em;
+}
