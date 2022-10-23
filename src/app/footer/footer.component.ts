@@ -1,8 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-footer',
   template: `
+
+<style>
+.icongt{
+  border-radius: 16px;
+  border: none;
+}
+
+</style>
 
 <div class="fixed-bottom">
 
@@ -17,24 +28,21 @@ import { Component, OnInit } from '@angular/core';
         style="background-color: #dd4b39;"
         href="#!"
         role="button"
-        ><i class="fab fa-google"></i
-      ></a>
+        ><fa-icon [icon]="faGoogle"></fa-icon></a>
       <!-- Linkedin -->
       <a
         class="btn btn-primary btn-floating m-1"
         style="background-color: #0082ca;"
         href="#!"
         role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
+        ><fa-icon [icon]="faLinkedinIn"></fa-icon></a>
       <!-- Github -->
       <a
         class="btn btn-primary btn-floating m-1"
         style="background-color: #333333;"
         href="#!"
         role="button"
-        ><i class="fab fa-github"></i
-      ></a>
+        ><fa-icon class="icon" [icon]="faGithub"></fa-icon></a>
     </section>
     <!-- Section: Social media -->
   </div>
@@ -52,6 +60,9 @@ import { Component, OnInit } from '@angular/core';
 `,
 })
 export class FooterComponent implements OnInit {
+  faLinkedinIn = faLinkedinIn;
+  faGithub = faGithub;
+  faGoogle = faGoogle;
 
   constructor() { }
 
