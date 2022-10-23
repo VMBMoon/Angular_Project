@@ -18,7 +18,7 @@ export class VendedorComponent implements OnInit {
   }
 
   Calcular() {
-    this.salarioTotal = this.salarioBase+this.comissao+this.carrosVendidos;
+    this.salarioTotal = this.salarioBase+(this.comissao*this.carrosVendidos);
   }
 
 }

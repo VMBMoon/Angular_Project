@@ -14,7 +14,7 @@ a {
 
 body {
   height: auto;
-
+  background-image: url("\src\assets\img\gradient_squares.png");
 }
 
 .class {
