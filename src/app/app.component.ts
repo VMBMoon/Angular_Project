@@ -5,15 +5,8 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-
-  template: `
-  <app-header></app-header>
-
-  <router-outlet>
-
-  <app-footer></app-footer>
-`,
 
 })
 export class AppComponent {
