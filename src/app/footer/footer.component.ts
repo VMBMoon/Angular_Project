@@ -7,17 +7,8 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
   selector: 'app-footer',
   template: `
 
-<style>
-.icongt{
-  border-radius: 16px;
-  border: none;
-}
 
-</style>
-
-<div class="fixed-bottom">
-
-  <footer class="footer bg-light text-center text-white">
+<footer class="footer bg-light text-center text-white">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
@@ -42,7 +33,7 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
         style="background-color: #333333;"
         href="#!"
         role="button"
-        ><fa-icon class="icon" [icon]="faGithub"></fa-icon></a>
+        ><fa-icon [icon]="faGithub"></fa-icon></a>
     </section>
     <!-- Section: Social media -->
   </div>
@@ -54,8 +45,6 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
   </div>
   <!-- Copyright -->
 </footer>
-
-</div>
 <!-- End of .container -->
 `,
 })
