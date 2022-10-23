@@ -12,6 +12,11 @@ export class ParentDataComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+    this.name = 'ShrineKeeper';
 
-}
+    this.userData = {
+      email: 'kitsune@email.com',
+      role: 'admin',
+  };
+
+}}

@@ -2,16 +2,19 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+
+  template: `
+  <app-header></app-header>
+
+  <router-outlet>
+
+  <app-footer></app-footer>
+`,
+
 })
 export class AppComponent {
-  userName = 'ShrineKeeper';
-
-  userData = {
-    email: 'kitsune@email.com',
-    role: 'admin',
-  };
 
   title = 'Angular_Project';
+
 }

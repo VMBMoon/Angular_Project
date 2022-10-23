@@ -5,7 +5,7 @@
   background: rgba(245, 245, 245, 0.24);
   border: none;
   border-radius: 8px;
-  background-image: url("D:\Arquivos\Hisui\Imagens\dice.png") ;
+  background-image: url("\src\assets\img\dice.png") ;
   background-size: cover;
   background-blend-mode:overlay;
   transition: all 0.2s;
