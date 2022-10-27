@@ -17,7 +17,9 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
       <a
         class="btn btn-primary btn-floating m-1"
         style="background-color: #dd4b39;"
-        href="#!"
+        href="https://www.google.com/search?q=angular"
+        target="_blank"
+        rel="noopener norefferrer"
         role="button"
         ><fa-icon [icon]="faGoogle"></fa-icon></a>
       <!-- Linkedin -->
@@ -31,7 +33,9 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
       <a
         class="btn btn-primary btn-floating m-1"
         style="background-color: #333333;"
-        href="#!"
+        href="https://github.com/HisuiKitsune/Angular_Project"
+        target="_blank"
+        rel="norefferer noopener"
         role="button"
         ><fa-icon [icon]="faGithub"></fa-icon></a>
     </section>

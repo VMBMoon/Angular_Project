@@ -1,5 +1,9 @@
-h2 {
+.UserTitle {
+  margin: auto;
   background: darkorchid;
   color: whitesmoke;
-  padding: 15px;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 8px;
+  width: fit-content;
 }

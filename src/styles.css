@@ -6,6 +6,40 @@
   font-family: 'Nunito', sans-serif;
   text-align: center;
 }
+.MainTitle {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #151B8D;
+  width: fit-content;
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+  transition: all 0.5s;
+
+}
+.MainTitle:hover{
+  transform: translateY(-4px);
+}
+.MainTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #E23237;
+  opacity: 0;
+  transition: opacity 400ms, transform 400ms;
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.MainTitle:hover::after,
+.MainTitle:focus::after{
+  transform: scale(1);
+}
 
 a {
   color: green;
@@ -18,22 +52,16 @@ body {
 }
 
 .class {
-  border-bottom: 1px solid red;
+  background-color: #fff;
+  border-radius: 8px;
   padding: 2em;
   margin-bottom: 1em;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  transition: all 0.5s;
 }
-
-a.nav-link{
-  color: #E23237;
-  border-radius: 6px;
-}
-a.disabled{
-  color: gray;
-}
-a.nav-link:hover{
-  background-color: #E23237;
-  color: white;
-  border-radius: 6px;
+.class:hover{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transform: translateY(-5px);
 }
 
 main {

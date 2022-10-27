@@ -10,7 +10,11 @@ export class DirectivesComponent implements OnInit {
   font = 'Times New Roman';
   color = 'red';
   background = 'darkgrey';
-  padding = 15;
+  padding = 0.5;
+  border = 8;
+  margin = 'auto';
+  width = 'fit-content';
+  mb = 0.5;
 
   classes = ['green-title', 'small-title'];
 

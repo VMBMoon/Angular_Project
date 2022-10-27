@@ -1,5 +1,17 @@
 .title {
   background: darkred;
   color: whitesmoke;
-  padding: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  margin: auto;
+  margin-bottom: 1em;
+  width: fit-content;
+}
+ p{
+  font-weight: bold;
+ }
+
+a{
+  color: darkred;
+  text-decoration: none;
 }

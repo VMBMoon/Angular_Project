@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { VendasComponent } from './pages/vendas/vendas.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IndexComponent } from './index/index.component';
 
 
 @NgModule({
@@ -40,15 +41,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FooterComponent,
     HomeComponent,
     VendasComponent,
+    IndexComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [
-  {provide: LocationStrategy, useClass: HashLocationStrategy}
+  {provide: LocationStrategy, useClass: HashLocationStrategy},
 
   ],
   bootstrap: [AppComponent]

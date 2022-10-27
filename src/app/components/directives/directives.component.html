@@ -1,7 +1,18 @@
 <div class="class">
-  <h2 [ngStyle]="{'font-size': size + 'px', 'font-family': font, color: color, 'background': background, 'padding': padding + 'px'}" >
+  <div [ngStyle]="{
+  'font-size': size + 'px',
+  'font-family': font, color: color,
+  'background': background,
+  'padding-left': padding + 'em',
+  'padding-right': padding + 'em',
+  'border-radius': border + 'px',
+  'margin': margin,
+  'width': width,
+  'margin-bottom': mb + 'em'
+
+  }" >
     Testing directives
-  </h2>
+</div>
 
   <h3 [ngClass]="classes">Directive 1</h3>
   <h3 [ngClass]="classes">Directive 2</h3>
