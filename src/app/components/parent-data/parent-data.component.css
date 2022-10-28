@@ -6,4 +6,9 @@
   padding-right: 1em;
   border-radius: 8px;
   width: fit-content;
+  margin-bottom: 1.5em;
+}
+p {
+  font-weight: 500;
+  line-height: 15px;
 }

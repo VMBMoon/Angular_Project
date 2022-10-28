@@ -2,7 +2,7 @@
   <button class="secret" (click)="showName()">Secret Button</button>
     <div class="canShow" *ngIf="canShow">This box is shown because was permitted
       <div *ngIf="name === 'James Bond'; else agentnotfound">
-        <h2>The name is Bond, James Bond</h2>
+        <div><h2>The name is Bond, James Bond</h2></div>
         <button class="invade" (click)="invade()">Invade</button>
       </div>
   <ng-template #agentnotfound>

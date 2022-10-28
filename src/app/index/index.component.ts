@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 
 <style>
   section {
+    margin: auto;
     position: fixed;
-    background: linear-gradient(150deg, #2B65EC 54.9%, #fff 55%);
+    background: rgb(111,149,237);
+    background: linear-gradient(146.5deg, rgba(111,149,237,1) 10%, rgba(43,101,236,1) 56.2%, rgba(255,255,255,1) 56.3%);
     min-height: calc(100vh - 56px - 150px);
   }
   img {
@@ -21,7 +23,7 @@ import { Component, OnInit } from '@angular/core';
     top: 250px;
 
   }
-  div {
+  div.container {
     margin: auto;
     position: fixed;
     right: 600px;
@@ -40,7 +42,7 @@ import { Component, OnInit } from '@angular/core';
 
 </style>
 <section class="container-fluid">
-  <div>
+  <div class="container">
     <h1><strong> Welcome to Angular </strong></h1>
     <h3>Web Application</h3>
     <p class="version"> Angular 14.2 </p>

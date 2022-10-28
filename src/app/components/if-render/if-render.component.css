@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-h2 {
+div h2 {
+  margin: auto;
   background:black;
   color: whitesmoke;
   padding: 15px;
   border-radius: 10px ;
+  width: fit-content;
 }
 button.secret{
   padding: 15px 25px;

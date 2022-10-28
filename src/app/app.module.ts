@@ -21,7 +21,14 @@ import { HomeComponent } from './home/home.component';
 import { VendasComponent } from './pages/vendas/vendas.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IndexComponent } from './index/index.component';
-
+import { CurrencyComponent } from './components/currency/currency.component';
+import { ConversorComponent } from './pages/conversor/conversor.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -42,14 +49,26 @@ import { IndexComponent } from './index/index.component';
     HomeComponent,
     VendasComponent,
     IndexComponent,
+    CurrencyComponent,
+    ConversorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     FontAwesomeModule,
+    MatSliderModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule
   ],
-  providers: [
+  exports: [
+    MatButtonModule,
+    MatButtonToggleModule,
+  ],
+  providers: [HttpClientModule,
   {provide: LocationStrategy, useClass: HashLocationStrategy},
 
   ],
