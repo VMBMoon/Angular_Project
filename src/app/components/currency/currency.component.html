@@ -1,0 +1,25 @@
+<div class="main-container">
+  <label>Value</label>
+  <input type="number" name="salarioBase" min="1" step="5"
+  ondrop="return false;"onpaste="return false;"
+  onkeypress='return event.charCode>=48 && event.charCode<=57'
+  formControlName="valor"/>
+
+  <div class="selection-cont">
+    <select name="" id="country1">
+      <option value="USD">American Dollar</option>
+      <option value="BRL">Real</option>
+      <option value="EUR">Euro</option>
+    </select>
+    <fa-icon [icon]="faArrowRightArrowLeft "></fa-icon>
+    <select name="" id="country2">
+      <option value="USD">American Dollar</option>
+      <option value="BRL">Real</option>
+      <option value="EUR">Euro</option>
+    </select>
+  </div>
+      <button mat-raised-button color="primary">Convert</button>
+<div><h4 style="color: green;"></h4></div>
+</div>
+
+
