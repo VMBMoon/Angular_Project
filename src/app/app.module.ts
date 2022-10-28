@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +29,14 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { MatOption } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -62,16 +70,20 @@ import { CommonModule } from '@angular/common';
     MatButtonToggleModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
-  ],
-  exports: [
-    MatButtonModule,
-    MatButtonToggleModule,
-  ],
-  providers: [HttpClientModule,
-  {provide: LocationStrategy, useClass: HashLocationStrategy},
+    CommonModule,
+    MatInputModule,
+    MatDividerModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatOptionModule,
+    BrowserAnimationsModule,
 
   ],
-  bootstrap: [AppComponent]
+  exports: [MatButtonModule, MatButtonToggleModule],
+  providers: [
+    HttpClientModule,
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
