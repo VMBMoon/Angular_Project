@@ -1,25 +1,75 @@
-<div class="main-container">
-  <label>Value</label>
-  <input type="number" name="salarioBase" min="1" step="5"
-  ondrop="return false;"onpaste="return false;"
-  onkeypress='return event.charCode>=48 && event.charCode<=57'
-  formControlName="valor"/>
+<div>
+  <form [formGroup]="currencyForm" (submit)="converter()" class="currency-form">
+    <section>
+      <mat-form-field class="calculadora-full-width" appearance="fill">
+        <mat-label>Money Value</mat-label>
+        <input
+          matInput
+          type="number"
+          id="money-value"
+          formControlName="moneyValue"
+          placeholder="Primeiro número"
+          required
+        />
+        <mat-error *ngIf="moneyValue.errors?.['required']">
+          <i style="color: red">Value required</i>
+        </mat-error>
+      </mat-form-field>
+       <mat-form-field class="calculadora-full-width" appearance="fill">
+<!--        <mat-label>Segundo Numero</mat-label>
+        <input
+          matInput
+          type="number"
+          id="second-value"
+          formControlName="secondValue"
+          placeholder="Segundo número"
+          required
+        />
+        <mat-error *ngIf="secondValue.errors?.['required']">
+          <i style="color: red">campo obrigatório</i>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="calculadora-full-width" appearance="fill"> -->
+        <mat-label>Currency</mat-label>
 
-  <div class="selection-cont">
-    <select name="" id="country1">
-      <option value="USD">American Dollar</option>
-      <option value="BRL">Real</option>
-      <option value="EUR">Euro</option>
-    </select>
-    <fa-icon [icon]="faArrowRightArrowLeft "></fa-icon>
-    <select name="" id="country2">
-      <option value="USD">American Dollar</option>
-      <option value="BRL">Real</option>
-      <option value="EUR">Euro</option>
-    </select>
-  </div>
-      <button mat-raised-button color="primary">Convert</button>
-<div><h4 style="color: green;"></h4></div>
+        <mat-select formControlName="currency" required>
+          <mat-option>None</mat-option>
+          <mat-option
+            *ngFor="let currency of moneyView | keyvalue"
+            [value]="currency.key"
+          >
+            {{ currency.value }}
+          </mat-option>
+        </mat-select>
+
+        <mat-error *ngIf="currency.pending">Validating...</mat-error>
+        <mat-error
+          *ngIf="currency.invalid"
+          class="alert alert-danger operador-errors"
+        >
+          <mat-error *ngIf="currency.errors?.['required']">
+            <i style="color: red">Value required</i>
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+    </section>
+
+    <section>
+      <div class="calculadora-btn-row">
+        <button
+          mat-raised-button
+          color="primary"
+          id="btnCalcula"
+          type="submit"
+          [disabled]="currencyForm.invalid"
+        >
+          Convert
+        </button>
+      </div>
+    </section>
+  </form>
+
+  <mat-divider></mat-divider>
+
+  <section>Conversion result: {{ result }}</section>
 </div>
-
-
