@@ -1,52 +1,46 @@
 <div>
   <form [formGroup]="currencyForm" (submit)="converter()" class="currency-form">
     <section>
-      <mat-form-field class="calculadora-full-width" appearance="fill">
+      <mat-form-field class="input-full-width" [hideRequiredMarker]="moneyValue.value" appearance="standard">
         <mat-label>Money Value</mat-label>
-        <input
-          matInput
-          type="number"
-          id="money-value"
-          formControlName="moneyValue"
-          placeholder="Primeiro número"
-          required
-        />
+        <input class="input" matInput type="number" id="money-value" min="1" formControlName="moneyValue"
+          placeholder="0" ondrop="return false;" onpaste="return false;"
+          onkeypress="return event.charCode>=48 && event.charCode<=57" required />
+        <span matPrefix>$&nbsp;</span>
         <mat-error *ngIf="moneyValue.errors?.['required']">
           <i style="color: red">Value required</i>
         </mat-error>
       </mat-form-field>
-       <mat-form-field class="calculadora-full-width" appearance="fill">
-<!--        <mat-label>Segundo Numero</mat-label>
-        <input
-          matInput
-          type="number"
-          id="second-value"
-          formControlName="secondValue"
-          placeholder="Segundo número"
-          required
-        />
-        <mat-error *ngIf="secondValue.errors?.['required']">
-          <i style="color: red">campo obrigatório</i>
+      <!--------------  from value  --------------------->
+      <mat-form-field class="currencyfrom-full-width" [hideRequiredMarker]="firstValue.value" appearance="standard">
+        <mat-label>From</mat-label>
+        <mat-select class="selectFrom" formControlName="firstValue" required>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let firstValue of moneyView | keyvalue" [value]="firstValue.key">
+            {{ firstValue.value }}
+          </mat-option>
+        </mat-select>
+
+        <mat-error *ngIf="firstValue.pending">Validating...</mat-error>
+        <mat-error *ngIf="firstValue.invalid" class="alert alert-danger operador-errors">
+          <mat-error *ngIf="firstValue.errors?.['required']">
+            <i style="color: red">Value required</i>
+          </mat-error>
         </mat-error>
       </mat-form-field>
-      <mat-form-field class="calculadora-full-width" appearance="fill"> -->
-        <mat-label>Currency</mat-label>
 
+      <!--------------  to value  --------------------->
+      <mat-form-field class="currencyto-full-width" [hideRequiredMarker]="currency.value" appearance="standard">
+        <mat-label>To</mat-label>
         <mat-select formControlName="currency" required>
           <mat-option>None</mat-option>
-          <mat-option
-            *ngFor="let currency of moneyView | keyvalue"
-            [value]="currency.key"
-          >
+          <mat-option *ngFor="let currency of moneyView | keyvalue" [value]="currency.key">
             {{ currency.value }}
           </mat-option>
         </mat-select>
 
         <mat-error *ngIf="currency.pending">Validating...</mat-error>
-        <mat-error
-          *ngIf="currency.invalid"
-          class="alert alert-danger operador-errors"
-        >
+        <mat-error *ngIf="currency.invalid" class="alert alert-danger operador-errors">
           <mat-error *ngIf="currency.errors?.['required']">
             <i style="color: red">Value required</i>
           </mat-error>
@@ -54,22 +48,17 @@
       </mat-form-field>
     </section>
 
+    <!--------------  end values  --------------------->
+
     <section>
       <div class="calculadora-btn-row">
-        <button
-          mat-raised-button
-          color="primary"
-          id="btnCalcula"
-          type="submit"
-          [disabled]="currencyForm.invalid"
-        >
+        <button mat-raised-button color="primary" id="btnCalcula" type="submit" [disabled]="currencyForm.invalid">
           Convert
         </button>
       </div>
     </section>
+    <section>
+      <p>Conversion result: <span value="0.00">{{ result }}</span></p>
+    </section>
   </form>
-
-  <mat-divider></mat-divider>
-
-  <section>Conversion result: {{ result }}</section>
 </div>

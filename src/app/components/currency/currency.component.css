@@ -1,0 +1,67 @@
+.currency-form{
+  margin: auto;
+  background-color: white;
+  width: fit-content;
+  border-radius: 8px;
+  padding: 2em;
+  margin-top: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  transition: all 0.5s;
+}
+.currency-form:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transform: translateY(-5px);
+}
+.input-full-width{
+  display: flexbox;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 2em;
+
+}
+.currencyfrom-full-width {
+  display: flexbox;
+  justify-content:left;
+  width: 20%;
+  align-items: left;
+  margin-right: 5em;
+  margin-bottom: 2em;
+  background:none;
+}
+.currencyto-full-width {
+  display:flexbox;
+  justify-content: right;
+  width: 20%;
+  align-items: right;
+  margin-bottom: 2em;
+  margin-left: 5em;
+}
+button {
+  width: 140px;
+}
+section p {
+  font-weight: 500;
+  color: indigo;
+  margin-top: 1em;
+  text-align: center;
+
+}
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
