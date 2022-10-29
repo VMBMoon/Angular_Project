@@ -1,43 +1,18 @@
 <div class="container">
   <div class="mb-3 mt-5">
     <label>Salário Base</label>
-    <input
-      class="form-control"
-      [(ngModel)]="salarioBase"
-      type="number"
-      name="salarioBase"
-      min="1"
-      step="5"
-      ondrop="return false;"
-      onpaste="return false;"
-      onkeypress="return event.charCode>=48 && event.charCode<=57"
-    />
+    <input class="form-control" [(ngModel)]="salarioBase" type="number" name="salarioBase" min="1" step="5"
+      ondrop="return false;" onpaste="return false;" onkeypress="return event.charCode>=48 && event.charCode<=57" />
   </div>
   <div class="mb-3 mt-4">
     <label>Comissão</label>
-    <input
-      class="form-control"
-      [(ngModel)]="comissao"
-      type="number"
-      name="comissao"
-      min="1"
-      step="5"
-      ondrop="return false;"
-      onpaste="return false;"
-    />
+    <input class="form-control" [(ngModel)]="comissao" type="number" name="comissao" min="1" step="5"
+      ondrop="return false;" onpaste="return false;" />
   </div>
   <div class="mb-3 mt-4">
     <label>Carros Vendidos</label>
-    <input
-      class="form-control"
-      [(ngModel)]="carrosVendidos"
-      type="number"
-      name="carrosVendidos"
-      min="1"
-      step="5"
-      ondrop="return false; "
-      onpaste="return false;"
-    />
+    <input class="form-control" [(ngModel)]="carrosVendidos" type="number" name="carrosVendidos" min="1" step="5"
+      ondrop="return false; " onpaste="return false;" />
   </div>
   <button class="btn btn-success mb-5" (click)="Calcular()">Calcular</button>
   <h3 style="color: green">Total: {{ salarioTotal }}</h3>

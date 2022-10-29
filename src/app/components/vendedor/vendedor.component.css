@@ -8,14 +8,14 @@ div.container {
   padding-right: 50px;
   padding-bottom: 10px;
   padding-top: 5px;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   transition: all 0.5s;
 }
 
 div.container:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   transform: translateY(-5px);
-
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -26,6 +26,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
