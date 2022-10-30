@@ -36,6 +36,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatOption } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -77,7 +78,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatOptionModule,
     BrowserAnimationsModule,
-
+    MatTableModule,
   ],
   exports: [MatButtonModule, MatButtonToggleModule],
   providers: [
