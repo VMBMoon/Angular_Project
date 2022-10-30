@@ -64,11 +64,11 @@
 </div>
 <div class="historyTable" *ngIf="list !== [{value: undefined}]">
   <h3>History</h3>
-<ul *ngFor="let item of list">
+<ul class="ulList" *ngFor="let item of list">
   <li>
-    <span class="id">{{item.id}}</span>
-    <span class="value">{{item.value}}</span>
-    <span class="fromto">{{item.from}} <fa-icon [icon]="faArrowRightArrowLeft"></fa-icon> {{item.to}}</span>
+    <div class="id">{{item.id}}</div>
+    <div class="value">{{item.value}}</div>
+    <div class="fromto">{{item.from}} <fa-icon [icon]="faArrowRightArrowLeft"></fa-icon> {{item.to}}</div>
   </li>
 </ul>
 </div>

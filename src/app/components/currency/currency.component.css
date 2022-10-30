@@ -4,7 +4,7 @@
   width: fit-content;
   border-radius: 8px;
   padding: 2em;
-  margin-top: 10em;
+  margin-top: 5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +14,6 @@
 }
 .currency-form:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  transform: translateY(-5px);
 }
 .input-full-width{
   display: flexbox;
@@ -60,10 +59,8 @@ section p {
   margin-top: 2em;
   padding-top: 1em;
   padding-bottom: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-right: 1em;
+  padding-left: 1em;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   transition: all 0.5s;
   width: 780px;
@@ -79,35 +76,57 @@ section p {
 
 div.historyTable h3 {
   color: indigo;
-  margin-left: 1em;
+  /*background-color: brown;*/
+  margin: auto;
+  /*width: 20em;*/
+  text-align: center;
+  margin-bottom: 1em;
+  border-bottom: 1px solid indigo;
+  cursor: default;
+}
+div.historyTable h3::after {
+  width:80% ;
 }
 
-ul{
+ul.ulList{
   list-style-type: none;
+  display: grid;
+  /*background-color: blueviolet;*/
+  height: fit-content;
+  margin-left: -1em;
 }
 
-span.value {
-  display: flexbox;
-  justify-content:center;
-  align-items: center;
-  margin-right: 2em;
-  margin-left: 7em;
+div.id {
+  display: block;
+  float: left;
+  width: 5%;
+  /*background-color: orange;*/
+
 }
-span.id {
-  display: flexbox;
-  justify-content:left;
-  width: 20%;
-  align-items: left;
-  margin-right: 5em;
-  margin-left: 5em;
+div.value {
+  display: block;
+  float:left;
+  width: 50%;
+  margin: auto;
+  text-align: end;
+  /*background-color: pink;*/
 }
-span.fromto {
-  display: flexbox;
-  justify-content:right;
-  width: 20%;
-  align-items: right;
-  margin-right: 5em;
-  margin-left: 5em;
+div.fromto {
+  display: block;
+  float: inline-end;
+  /*background-color: red;*/
+  padding-right: 1em;
+}
+
+li {
+  padding: 1px;
+  transition: all 0.1s;
+  cursor:default;
+}
+li:hover {
+  background-color: rgb(236, 236, 236);
+  border-radius: 8px;
+
 }
 
 
@@ -121,4 +140,23 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .historyTable{
+    width:100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .historyTable{
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .historyTable{
+    width: 768px;
+  }
 }
