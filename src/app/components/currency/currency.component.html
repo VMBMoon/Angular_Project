@@ -51,8 +51,8 @@
     <!--------------  end values  --------------------->
 
     <section>
-      <div class="calculadora-btn-row">
-        <button mat-raised-button color="primary" id="btnCalcula" type="submit" [disabled]="currencyForm.invalid">
+      <div class="currency-btn-row">
+        <button mat-raised-button color="primary" id="btnConvert" type="submit" (click)="addHistory()" [disabled]="currencyForm.invalid">
           Convert
         </button>
       </div>
@@ -61,4 +61,14 @@
       <p>Conversion result: <span value="0.00">{{ result }}</span></p>
     </section>
   </form>
+</div>
+<div class="historyTable" *ngIf="list !== [{value: undefined}]">
+  <h3>History</h3>
+<ul *ngFor="let item of list">
+  <li>
+    <span class="id">{{item.id}}</span>
+    <span class="value">{{item.value}}</span>
+    <span class="fromto">{{item.from}} <fa-icon [icon]="faArrowRightArrowLeft"></fa-icon> {{item.to}}</span>
+  </li>
+</ul>
 </div>

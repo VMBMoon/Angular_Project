@@ -31,7 +31,6 @@
   align-items: left;
   margin-right: 5em;
   margin-bottom: 2em;
-  background:none;
 }
 .currencyto-full-width {
   display:flexbox;
@@ -46,12 +45,70 @@ button {
 }
 section p {
   font-weight: 500;
+  font-size: large;
   color: indigo;
   margin-top: 1em;
   text-align: center;
 
 }
 
+.historyTable {
+  margin: auto;
+  margin-bottom: 2em;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  transition: all 0.5s;
+  width: 780px;
+  transition: all 0.5s;
+  color: indigo;
+
+}
+.historyTable:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transform: translateY(-5px);
+
+}
+
+div.historyTable h3 {
+  color: indigo;
+  margin-left: 1em;
+}
+
+ul{
+  list-style-type: none;
+}
+
+span.value {
+  display: flexbox;
+  justify-content:center;
+  align-items: center;
+  margin-right: 2em;
+  margin-left: 7em;
+}
+span.id {
+  display: flexbox;
+  justify-content:left;
+  width: 20%;
+  align-items: left;
+  margin-right: 5em;
+  margin-left: 5em;
+}
+span.fromto {
+  display: flexbox;
+  justify-content:right;
+  width: 20%;
+  align-items: right;
+  margin-right: 5em;
+  margin-left: 5em;
+}
 
 
 /* Chrome, Safari, Edge, Opera */
