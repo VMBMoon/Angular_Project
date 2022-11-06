@@ -18,16 +18,14 @@ import { VendedorComponent } from './components/vendedor/vendedor.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { VendasComponent } from './pages/vendas/vendas.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IndexComponent } from './index/index.component';
 import { CurrencyComponent } from './components/currency/currency.component';
-import { ConversorComponent } from './pages/conversor/conversor.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -37,6 +35,11 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatOption } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
+import { ProductsListComponent } from './products/products-list/products-list.component';
+import { ProductsFormComponent } from './products/products-form/products-form.component';
+import { MatIconModule } from '@angular/material/icon';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 
 @NgModule({
@@ -56,10 +59,11 @@ import { MatTableModule } from '@angular/material/table';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    VendasComponent,
     IndexComponent,
     CurrencyComponent,
-    ConversorComponent,
+    ProductsListComponent,
+    ProductsFormComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -79,6 +83,8 @@ import { MatTableModule } from '@angular/material/table';
     MatOptionModule,
     BrowserAnimationsModule,
     MatTableModule,
+    MatIconModule,
+    MatSnackBarModule,
   ],
   exports: [MatButtonModule, MatButtonToggleModule],
   providers: [
