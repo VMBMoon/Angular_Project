@@ -40,6 +40,7 @@ ul.nav > a.nav-link:focus:hover {
           <a class="nav-link" href="#/Home">Study Project</a>
           <a class="nav-link" href="#/Vendas">Sales</a>
           <a class="nav-link" href="#/Conversor">Currency</a>
+          <a class="nav-link" href="#/List">Products</a>
     </ul>
     </div>
 </nav>
