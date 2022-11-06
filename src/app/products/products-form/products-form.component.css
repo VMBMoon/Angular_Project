@@ -1,0 +1,39 @@
+div.card {
+  margin: auto;
+  margin-top: 4em;
+  width: 60%;
+  padding: 3em;
+  margin-bottom: 50em;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  transition: all 0.3s;
+
+}
+
+div.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+}
+
+mat-form-field{
+  margin: auto;
+  display: block;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+button{
+  margin-right: 1em;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

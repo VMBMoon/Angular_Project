@@ -1,0 +1,41 @@
+<div class="card">
+  <form #form="ngForm" (ngSubmit)="saveData(form)">
+    <section>
+      <mat-form-field appearance="outline">
+        <mat-label for="name">Name</mat-label>
+        <input matInput type="text" name="name" id="name" [(ngModel)]="data.name" required />
+        <mat-hint>Type product name</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="quantity">Quantity</mat-label>
+        <input matInput type="number" name="quantity" id="quantity" min="1" [(ngModel)]="data.quantity" required />
+        <mat-hint>Type the quantity</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="brand">Developer</mat-label>
+        <input matInput type="text" name="brand" id="brand" [(ngModel)]="data.brand" required />
+        <mat-hint>Type the Developer of product</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="expire_date">Expire Date</mat-label>
+        <input matInput type="date" name="expire_date" id="expire_date" [(ngModel)]="data.expire_date" />
+        <mat-hint>Type date of expire (leave blank if no expire date)</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="category">Category</mat-label>
+        <input matInput name="category" id="category" [(ngModel)]="data.category" required />
+        <mat-hint>Type the category of product</mat-hint>
+      </mat-form-field>
+
+      <button  mat-raised-button type="submit" color="primary"><mat-icon>done</mat-icon></button>
+      <a mat-raised-button href="#/List" color="accent"><mat-icon>keyboard_return</mat-icon></a>
+
+
+    </section>
+  </form>
+</div>
+

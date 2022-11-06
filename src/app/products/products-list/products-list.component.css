@@ -1,0 +1,60 @@
+.demo-table {
+  margin: auto;
+  width: 80%;
+  margin-top: 4em;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  transition: all 0.3s;
+
+}
+
+.demo-table:hover{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+}
+
+.mat-header-cell{
+  font-weight: bold;
+}
+
+.mat-row:hover .mat-cell {
+  border-color: #E23237;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 2px solid none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mat-column-name {
+  text-align: left;
+  font-size: 18px;
+  border-left: 10px solid #151B8D;
+}
+
+.mat-column-quantity {
+  font-size: 18px;
+  text-align: center;
+  font-style: italic;
+}
+
+.mat-column-brand {
+  font-size: 18px;
+  text-align: center;
+}
+
+.mat-column-expire_date {
+  font-size: 18px;
+  text-align: center;
+  font-style: italic;
+}
+.mat-column-category {
+  font-size: 18px;
+  text-align: center;
+}
+
+.mat-fab{
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+}

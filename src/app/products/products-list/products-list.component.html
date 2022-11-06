@@ -1,0 +1,44 @@
+
+
+<table mat-table [dataSource]="products" class="mat-elevation-z8 demo-table">
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let products"> {{products.name}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="quantity">
+    <th mat-header-cell *matHeaderCellDef> Quantity</th>
+    <td mat-cell *matCellDef="let products"> {{products.quantity}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="brand">
+    <th mat-header-cell *matHeaderCellDef> Developer </th>
+    <td mat-cell *matCellDef="let products"> {{products.brand}}</td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="expire_date">
+    <th mat-header-cell *matHeaderCellDef> Expire Date </th>
+    <td mat-cell *matCellDef="let products"> {{products.expire_date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef> Category </th>
+    <td mat-cell *matCellDef="let products"> {{products.category}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<a href="#/Products" mat-fab color="primary" aria-label="Add product">
+<mat-icon>add</mat-icon>
+</a>
+
+<a href="" mat-fab color="warn" aria-label="Add product">
+  <mat-icon>delete</mat-icon>
+  </a>
+
