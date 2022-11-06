@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
     position: fixed;
     background: rgb(111,149,237);
     background: linear-gradient(145deg, #c65360 10%, #CB152B 51.2%, #0c0c0f 10%, #2B2C4E 51.3%);
-    min-height: calc(100vh - 56px - 150px);
+    min-height: calc(100vh - 56px - 0px);
   }
 
   img{
@@ -27,7 +27,7 @@ import { Component, OnInit } from '@angular/core';
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    min-height: calc(100vh - 56px - 150px);
+    min-height: calc(100vh - 56px - 0px);
 
   }
   div.text {
