@@ -7,45 +7,62 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
   selector: 'app-footer',
   template: `
 
+<style>
+a {
+
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: transparent;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+a.linkedin {
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+a.google {
+  margin-left: 1em;
+
+}
+a:hover {
+  color: #C7C7C8;
+  background-color: #fff;
+}
+
+</style>
 
 <footer class="footer bg-light text-center text-white">
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Google -->
-      <a
-        class="btn btn-primary btn-floating m-1"
-        style="background-color: #dd4b39;"
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+
+   Made With Angular © 2022
+    <a  class="google"
         href="https://www.google.com/search?q=angular"
         target="_blank"
         rel="noopener norefferrer"
         role="button"
-        ><fa-icon [icon]="faGoogle"></fa-icon></a>
-      <!-- Linkedin -->
-      <a
-        class="btn btn-primary btn-floating m-1"
-        style="background-color: #0082ca;"
-        href="#!"
-        role="button"
-        ><fa-icon [icon]="faLinkedinIn"></fa-icon></a>
-      <!-- Github -->
-      <a
-        class="btn btn-primary btn-floating m-1"
-        style="background-color: #333333;"
+        ><fa-icon class="fa-1x" [icon]="faGoogle"></fa-icon></a>
+
+    <a  class="github"
         href="https://github.com/HisuiKitsune/Angular_Project"
         target="_blank"
         rel="norefferer noopener"
         role="button"
-        ><fa-icon [icon]="faGithub"></fa-icon></a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
+        ><fa-icon class="fa-1x" [icon]="faGithub"></fa-icon></a>
 
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-   Made With Angular © 2022
+    <a  class="linkedin"
+        href="#!"
+        role="button"
+        ><fa-icon class="fa-1x" [icon]="faLinkedinIn"></fa-icon></a>
   </div>
   <!-- Copyright -->
 </footer>
