@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../shared/product';
 import { NgForm } from '@angular/forms';
@@ -19,6 +20,7 @@ export class ProductsFormComponent implements OnInit {
   constructor(
     private productsService: ProductsService,
     private _snackBar: MatSnackBar,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -38,6 +40,8 @@ export class ProductsFormComponent implements OnInit {
     if (form.valid) {
       this.productsService.saveData(this.data);
       this.openSnackBar('Registration Sucess', 'X');
+      this.router.navigate(['Products/List']);
     } else this.openSnackBar('Registration Failed', 'X');
   }
+
 }
