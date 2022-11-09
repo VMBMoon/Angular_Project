@@ -1,3 +1,4 @@
+import { EditProductComponent } from './products/edit-product/edit-product.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CurrencyComponent } from './components/currency/currency.component';
@@ -32,8 +33,12 @@ const routes: Routes = [
     component: ProductsFormComponent
   },
   {
-    path: 'List',
+    path: 'Products/List',
     component: ProductsListComponent
+  },
+  {
+    path: 'Edit/:id',
+    component: EditProductComponent
   },
 ];
 

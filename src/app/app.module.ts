@@ -25,7 +25,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -38,9 +38,8 @@ import { MatTableModule } from '@angular/material/table';
 import { ProductsListComponent } from './products/products-list/products-list.component';
 import { ProductsFormComponent } from './products/products-form/products-form.component';
 import { MatIconModule } from '@angular/material/icon';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { EditProductComponent } from './products/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +62,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     CurrencyComponent,
     ProductsListComponent,
     ProductsFormComponent,
-
+    EditProductComponent,
   ],
   imports: [
     BrowserModule,
