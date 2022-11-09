@@ -40,7 +40,7 @@ export class ProductsFormComponent implements OnInit {
     if (form.valid) {
       this.productsService.saveData(this.data);
       this.openSnackBar('Registration Sucess', 'X');
-      this.router.navigate(['Products/List']);
+      this.router.navigate(['/List']);
     } else this.openSnackBar('Registration Failed', 'X');
   }
 

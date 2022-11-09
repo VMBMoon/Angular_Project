@@ -33,7 +33,7 @@ const routes: Routes = [
     component: ProductsFormComponent
   },
   {
-    path: 'Products/List',
+    path: 'List',
     component: ProductsListComponent
   },
   {

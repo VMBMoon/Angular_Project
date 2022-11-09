@@ -49,7 +49,7 @@ export class EditProductComponent implements OnInit {
     if (form.valid) {
       this.productsService.saveData(this.data);
       this.openSnackBar('Product Edited', 'X');
-      this.router.navigate(['Products/List']);
+      this.router.navigate(['List']);
     } else this.openSnackBar('Edit Failed', 'X');
   }
 }
