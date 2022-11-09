@@ -1,6 +1,7 @@
 <div class="card">
   <form #form="ngForm" (ngSubmit)="saveData(form)">
     <section>
+
       <mat-form-field appearance="outline">
         <mat-label for="name">Name</mat-label>
         <input matInput type="text" name="name" id="name" [(ngModel)]="data.name" required />
@@ -32,7 +33,7 @@
       </mat-form-field>
 
       <button  mat-raised-button type="submit" color="primary"><mat-icon>done</mat-icon></button>
-      <a mat-raised-button href="#/List" color="accent"><mat-icon>keyboard_return</mat-icon></a>
+      <a mat-raised-button href="#/Products/List" color="accent"><mat-icon>keyboard_return</mat-icon></a>
 
 
     </section>
