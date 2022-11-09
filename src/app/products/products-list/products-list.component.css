@@ -22,7 +22,7 @@
 
 .mat-row .mat-cell {
   border-bottom: 2px solid none;
-  cursor: default;
+  cursor: pointer;
   transition: all 0.3s;
 }
 
@@ -49,10 +49,6 @@
   font-style: italic;
 }
 .mat-column-category {
-  font-size: 18px;
-  text-align: center;
-}
-.mat-column-actions {
   font-size: 18px;
   text-align: center;
 }
