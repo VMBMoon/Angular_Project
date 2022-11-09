@@ -1,8 +1,12 @@
+import * as uuid from 'uuid';
+import { Router } from '@angular/router';
+
 export class Product {
-  id!: Number;
-  name: String = '';
-  quantity!: Number;
-  brand: String = ''
-  expire_date?: Date ;
-  category: String = '';
+  id = uuid.v4();
+  name: string = '';
+  quantity!: number;
+  brand: string = ''
+  expire_date?: Date;
+  category: string = '';
 }
+
