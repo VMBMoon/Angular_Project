@@ -41,7 +41,7 @@ export class ProductsService {
     return this.http.delete(`${this.url}/${id}`);
   }
   refresh(): void {
-    window.location.reload();
+    setTimeout(() => window.location.reload(), 2000);
   }
 
   clear() {

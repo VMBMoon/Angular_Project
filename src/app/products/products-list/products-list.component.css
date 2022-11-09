@@ -53,6 +53,11 @@
   text-align: center;
 }
 
+.mat-column-actions {
+  font-size: 18px;
+  text-align: center;
+}
+
 .mat-fab{
   margin-top: 2em;
   margin-left: 1em;
